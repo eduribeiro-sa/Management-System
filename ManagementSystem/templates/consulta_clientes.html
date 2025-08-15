@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management System</title>
+    <link rel="shortcut icon" href="/static/assets/logo_mng-Photoroom-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">
+            <img class="logo" src="/static/assets/logo_mng-Photoroom-removebg-preview.png" alt="">
+        </a>
+        
+        <div class="titulo_sistema"> Sistema de <br> Gerenciamento </div>
+    </nav>
+   
+    
+    <div class="linha"></div>
+
+    <div class="conteudo_consulta_clientes">
+        <p class="consulta_clientes">Consulta Clientes</p>
+        <div class="table_container_clientes">
+            <table class="clientes">
+                <thead class="thead_clientes">
+                    <tr class="tr_clientes">
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cliente in clientes %}
+                    <tr>
+                        <td>{{ cliente[0] }}</td> <!-- ID -->
+                        <td>{{ cliente[1] }}</td> <!-- Nome -->
+                        <td>{{ cliente[2] }}</td> <!-- Email -->
+                        <td>
+                            <a href="/editar_cliente/{{ cliente[0] }}" class="link_editar">Editar</a> <br>
+                            <a href="/excluir_cliente/{{ cliente[0] }}" class="link_excluir">Excluir</a> <br>
+                            <a href="/ver_mais_cliente/{{ cliente[0] }}" class="link_mais">Ver mais</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                  
+            </table>
+        </div>
+    </div>
+</body>
+</html>

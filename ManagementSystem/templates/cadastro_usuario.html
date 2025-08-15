@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+    <link rel="shortcut icon" href="/static/assets/logo_mng-Photoroom-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">
+            <img class="logo" src="/static/assets/logo_mng-Photoroom-removebg-preview.png" alt="Logo">
+        </a>
+        <div class="titulo_sistema">Sistema de Gerenciamento</div>
+    </nav>
+
+    <div class="linha"></div>
+
+    <div class="conteudo_cadastro_usuario">
+        <p class="cadastro_usuario">Cadastro de Usuários</p>
+        <div class="conteudo_usuario">
+            <form action="/cadastro_usuario" method="post">
+                <div class="campo-form-usuario"> 
+                    <label for="nome_usuario">Nome Completo:</label>
+                    <input type="text" name="nome_usuario" placeholder="Digite seu Nome" required>
+                </div>
+
+                <div class="campo-form-usuario">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" name="usuario" placeholder="Crie um Nome de Usuário" required>
+                </div>
+
+                <div class="campo-form-usuario">
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" placeholder="Crie sua Senha" required>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

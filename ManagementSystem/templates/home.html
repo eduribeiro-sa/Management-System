@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management System</title>
+    <link rel="shortcut icon" href="/static/assets/logo_mng-Photoroom-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/Styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">
+            <img class="logo" src="/static/assets/logo_mng-Photoroom-removebg-preview.png" alt="">
+        </a>
+        <div class="titulo_sistema"> Sistema de <br> Gerenciamento </div>
+        <h2 class="saudacoes">
+            Bem-vindo, {{ user['nome_usuario'] }} 
+            <img src="{{ url_for('static', filename=user['imagem'] if user['imagem'] else 'default.png') }}" alt="" style="width: 50px; height: auto; border-radius: 30px;">
+ 
+        </h2>
+        
+            {{ user [4]}}
+        </h2> 
+    </nav>
+
+    <div class="linha"></div>
+
+    <div class="menu_navegacao">
+        <ul>
+            <li><a href="/cadastro_cliente">Cadastro Cliente</a></li>
+            <li><a href="/consulta_cliente">Consulta Cliente </a></li>
+            <li><a href="/cadastro_fornecedor">Cadastro Fornecedor</a></li>
+            <li><a href="/consulta_fornecedor">Consulta Fornecedor</a></li>
+            <li><a href="/cadastro_usuario">Cadastro Usuário</a></li>
+            <li><a href="/consulta_usuario">Consulta Usuário  </a></li>
+        </ul>
+        <a href="/">Sair</a>
+    </div>
+    <div class="imagem_container_home">
+        <div class="imagem_lado_home">
+            <img src="/static/assets/imagem_home.jpg" alt="Imagem ao lado" class="imagem_horizontal_home">
+        </div>
+    </div>
+    
+</body>
+</html>

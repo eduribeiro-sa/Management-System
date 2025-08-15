@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management System</title>
+    <link rel="shortcut icon" href="/static/assets/logo_mng-Photoroom-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">
+            <img class="logo" src="/static/assets/logo_mng-Photoroom-removebg-preview.png" alt="">
+        </a>
+        <div class="titulo_sistema"> Sistema de <br> Gerenciamento </div>
+    </nav>
+
+    
+    <div class="linha"></div>
+
+    <div class="conteudo_cadastro_cliente">
+        <p class="editar_cliente">Editar Cliente</h2>
+        <div class="formulario_cliente">
+            <form action="{{ url_for('editar_cliente', id=cliente[0]) }}" method="post">
+                <div class="campo-form-cliente">
+                    <label for="nome_cliente">Nome Completo:</label>
+                    <input type="text" name="nome_cliente" id="nome_cliente" value="{{ cliente[1] }}" required>
+                </div>
+
+                <div class="campo-form-cliente">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email_cliente" id="email_cliente" value="{{ cliente[2] }}" required>
+                    <label for="telefone_cliente">Telefone:</label>
+                    <input type="number" name="telefone_cliente" id="telefone_cliente" value="{{ cliente[3] }}" required>
+                </div>
+
+                <div class="campo-form-cliente">
+                    <label for="cpf_cliente">CPF:</label>
+                    <input type="number" name="cpf_cliente" id="cpf_cliente" value="{{ cliente[10] }}" required>
+                    <label for="cep_cliente">CEP:</label>
+                    <input type="text" name="cep_cliente" id="cep_cliente" value="{{ cliente[8] }}" required>
+                </div>
+
+                <div class="campo-form-cliente">
+                    <label for="end_rua_cliente">Endereço:</label>
+                    <input type="text" name="end_rua_cliente" id="end_rua_cliente" value="{{ cliente[4] }}" required>
+                    <label for="end_numero_cliente">Numero:</label>
+                    <input type="text" name="end_numero_cliente" id="end_numero_cliente" value="{{ cliente[5] }}" required>
+                </div>
+
+                <div class="campo-form-cliente">
+                    <label for="cidade_cliente">Cidade:</label>
+                    <input type="text" name="cidade_cliente" id="cidade_cliente" value="{{ cliente[6] }}" required>
+                    <label for="estado_cliente">Estado:</label>
+                    <input type="text" name="estado_cliente" id="estado_cliente" value="{{ cliente[7] }}" required>
+                </div>
+                <button type="submit"> Enviar </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

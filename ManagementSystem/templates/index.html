@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management System</title>
+    <link rel="shortcut icon" href="/static/assets/logo_mng-Photoroom-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/">
+            <img class="logo" src="/static/assets/logo_mng-Photoroom-removebg-preview.png" alt="">
+        </a>
+        <p class="titulo_sistema">Sistema de <br> Gerenciamento</p>
+    </nav>
+
+    <div class="linha"></div>
+
+    <div class="conteudo">
+        <div class="login">LOGIN</div>
+        <div class="conteudo_index">
+            <form action= "/login" method="post">
+                <div class="campo-form-login">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" name="usuario" id="usuario" required>
+                </div>
+
+                <div class="campo-form-login">
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" required>
+                </div>
+
+                <button type="submit"> Entrar </button>
+            </form>    
+       
+        </div>
+            <a href="/cadastro_usuario"> Criar nova conta </a>
+
+    </div>
+    <div class="imagem_container">
+        <div class="imagem-lado">
+            <img src="/static/assets/logo_empresa.png" alt="Imagem ao lado" class="imagem-horizontal">
+        </div>
+    </div>
+    
+
+</body>
+
+</html>

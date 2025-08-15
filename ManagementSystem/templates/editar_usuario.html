@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuário - Management System</title>
+    <link rel="shortcut icon" href="/static/assets/logo_mng-Photoroom-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">
+            <img class="logo" src="/static/assets/logo_mng-Photoroom-removebg-preview.png" alt="Logo">
+        </a>
+        <div class="titulo_sistema"> Sistema de <br> Gerenciamento </div>
+        <h2 class="saudacoes"> Bem-vindo, {{ nome_usuario }} </h2>
+    </nav>
+
+    <div class="linha"></div>
+
+    <div class="conteudo_editar_usuario">
+        <p class="editar_usuario">Editar Usuário</p>
+        <div class="formulario_usuario">
+            <form action="{{ url_for('salvar_edicao_usuario', usuario_id=usuario[0]) }}" method="post" enctype="multipart/form-data">
+                <div class="campo-form-usuario">
+                    <label for="nome_usuario">Nome Completo:</label>
+                    <input type="text" name="nome_usuario" id="nome_usuario" value="{{ usuario[1] }}" required>
+                </div>
+
+                <div class="campo-form-usuario">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" name="usuario" id="usuario" value="{{ usuario[2] }}" required>
+                </div>
+
+                <div class="campo-form-usuario">
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="Deixe vazio para não alterar">
+                </div>
+
+                <div class="campo-form-usuario">
+                    <label for="imagem">Imagem de Perfil:</label>
+                    {% if usuario[3] %}
+                    <img src="/static/images/{{ usuario[3] }}" alt="Imagem atual" class="imagem-atual">
+                    {% endif %}
+                    <input type="file" name="imagem" id="imagem" accept="image/*">
+                </div>
+
+                <button type="submit" class="botao-enviar">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Fornecedor</title>
+    <link rel="shortcut icon" href="/static/imagens/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">
+            <img class="logo" src="/static/assets/logo_mng-Photoroom-removebg-preview.png" alt="">
+        </a>
+        <div class="titulo_sistema">Sistema de <br> Gerenciamento</div>
+    </nav>
+
+    <div class="linha"></div>
+    
+        <div class="conteudo_cadastro_fornecedor">
+            <h2>Editar Fornecedor</h2>
+            <div class="formulario_fornecedor">
+                <form action="/editar_fornecedor/{{ fornecedor[0] }}" method="post">
+                    
+                    <div class="campo-form-fornecedor">
+                        <label for="nome_fornecedor">Nome ou Razão Social:</label>
+                        <input type="text" name="nome_fornecedor" id="nome_fornecedor" value="{{ fornecedor[1] }}" required>
+                    </div>
+
+                    <div class="campo-form-fornecedor">
+                        <label for="email_fornecedor">Email:</label>
+                        <input type="text" name="email_fornecedor" id="email_fornecedor" value="{{ fornecedor[2] }}" required>
+                        
+                        <label for="site_fornecedor">Site:</label>
+                        <input type="url" name="site_fornecedor" id="site_fornecedor" value="{{ fornecedor[4] }}" required>
+                    </div>
+
+                    <div class="campo-form-fornecedor">
+                        <label for="telefone_fornecedor">Telefone:</label>
+                        <input type="text" name="telefone_fornecedor" id="telefone_fornecedor" value="{{ fornecedor[3] }}" required>
+                        <label for="cnpj">CNPJ:</label>
+                        <input type="text" name="cnpj" id="cnpj" value="{{ fornecedor[6] }}" required>
+                    </div>
+
+                    <div class="campo-form-fornecedor">
+                        <label for="end_rua_fornecedor">Endereço:</label>
+                        <input type="text" name="end_rua_fornecedor" id="end_rua_fornecedor" value="{{ fornecedor[5] }}" required>
+                        <label for="end_numero_fornecedor">Número:</label>
+                        <input type="text" name="end_numero_fornecedor" id="end_numero_fornecedor" value="{{ fornecedor[7] }}" required>
+                    </div>
+
+                    <div class="campo-form-fornecedor">
+                        <label for="cidade_fornecedor">Cidade:</label>
+                        <input type="text" name="cidade_fornecedor" id="cidade_fornecedor" value="{{ fornecedor[8] }}" required>
+                        <label for="estado_fornecedor">Estado:</label>
+                        <input type="text" name="estado_fornecedor" id="estado_fornecedor" value="{{ fornecedor[10] }}" required>
+                    </div>
+
+                    <div class="campo-form-fornecedor">
+                        <label for="cep_fornecedor">CEP:</label>
+                        <input type="text" name="cep_fornecedor" id="cep_fornecedor" value="{{ fornecedor[10] }}" required>
+                    </div>
+                
+                    <button type="submit">Salvar</button>
+                </form>    
+            </div>
+            
+        </div>
+</body>
+</html>

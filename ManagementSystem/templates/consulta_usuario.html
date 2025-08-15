@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management System</title>
+    <link rel="shortcut icon" href="/static/assets/logo_mng-Photoroom-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">
+            <img class="logo" src="/static/assets/logo_mng-Photoroom-removebg-preview.png" alt="">
+        </a>
+        
+        <div class="titulo_sistema"> Sistema de <br> Gerenciamento </div>
+    </nav>
+   
+    
+    <div class="linha"></div>
+
+    <div class="conteudo_consulta_usuario">
+        <p class="consulta_usuario">Consulta Usuário</p>
+        <div class="table_container_usuario">
+            <table class="usuario">
+                <thead class="thead_usuario">
+                    <tr class="tr_usuario">
+                        <th>ID</th>
+                        <th>Nome Completo</th>
+                        <th>Usuário</th>
+                        <th>Imagem</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for usuario in usuarios %}
+                    <tr>
+                        <td>{{ usuario[0] }}</td> <!-- ID -->
+                        <td>{{ usuario[1] }}</td> <!-- Nome Completo -->
+                        <td>{{ usuario[2] }}</td> <!-- Usuário -->
+                        <td>
+                            {% if usuario[3] %}
+                            <img src="/static/images/{{ usuario[3] }}" alt="Imagem de {{ usuario[1] }}" class="imagem_usuario">
+                            {% else %}
+                            Não disponível
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href="/editar_usuario/{{ usuario[0] }}" class="link_editar">Editar</a>
+                            <a href="/excluir_usuario/{{ usuario[0] }}" class="link_excluir">Excluir</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

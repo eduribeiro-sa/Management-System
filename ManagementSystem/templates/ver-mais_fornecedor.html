@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Fornecedor</title>
+    <link rel="shortcut icon" href="/static/imagens/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">
+            <img class="logo" src="/static/assets/logo_mng-Photoroom-removebg-preview.png" alt="">
+        </a>
+        <div class="titulo_sistema">Sistema de <br> Gerenciamento</div>
+    </nav>
+
+    <div class="linha"></div>
+
+    <div class="conteudo_consulta_fornecedor">
+        <p class="consulta_fornecedor">Detalhes do Fornecedor</p>
+        <div class="table_container_fornecedor_vermais">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>CNPJ</th>
+                        <th>Site</th>
+                        <th>Endereço</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ fornecedor[0] }}</td>
+                        <td>{{ fornecedor[1] }}</td>
+                        <td>{{ fornecedor[2] }}</td>
+                        <td>{{ fornecedor[3] }}</td>
+                        <td>{{ fornecedor[6] }}</td>
+                        <td>{{ fornecedor[4] }}</td>
+                        <td>{{ fornecedor[5] }}, {{ fornecedor[8] }}, {{ fornecedor[9] }}, {{ fornecedor[10] }}</td>
+                        <td>
+                            <a href="/editar_fornecedor/{{ fornecedor[0] }}" class="link_editar">Editar</a>
+                            <a href="/excluir_fornecedor/{{ fornecedor[0] }}" class="link_excluir">Excluir</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

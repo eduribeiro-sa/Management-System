@@ -1,0 +1,911 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    background-image: url('/static/assets/fundo-roxo4.png'); /* Defina o caminho correto da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+/* Barra de Navegação */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 100%; /* Garante que o nav ocupe toda a largura sem afetar o conteúdo */
+    position: absolute; /* Posiciona o nav no topo sem empurrar o conteúdo principal */
+    top: 0;
+}
+
+.saudacoes {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-left: 980px; /* Adiciona um espaço à esquerda da saudação */
+}
+
+.linha{
+    position: absolute; /* Permite o posicionamento absoluto em relação ao contêiner pai */
+    width: 100%; /* Largura da linha */
+    padding: 1px; /* Altura da linha */
+    left: 0px; /* Distância do lado esquerdo do contêiner pai */
+    top: 120px; /* Distância do topo do contêiner pai */
+    background-color: #590059; /* Cor da linha */
+    display: block;
+    text-align: center;
+    justify-content: center;
+   
+}
+
+.logo {
+    width: 90px;
+    padding: 20px;
+    left: 300px;
+}
+
+.titulo_sistema {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: left;
+    left: 150px;
+}
+
+.conteudo{
+    margin-right: 15%;
+    display: block;
+}
+.login {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    justify-content: center;
+    display: block;
+    text-align: center; /* Centraliza o texto do título em relação ao formulário */
+    
+}
+
+
+/* Conteúdo principal */
+.conteudo_index {
+    margin-right: 40%;
+    background-color: #81039b;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    width: 520px;
+    flex-direction: column;
+    text-align: center;
+    display: block;
+}
+
+/* Título */
+.conteudo_index h2 {
+    margin-bottom: 20px;
+}
+.conteudo a {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #81039b;
+
+
+}
+
+/* Campos do formulário */
+.campo-form-login {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.campo-form-login label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.campo-form-login input[type="text"],
+.campo-form-login input[type="password"] {
+    width: 97%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9c4aad;
+    color: #FFFFFF;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Botão de Envio */
+button[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    background-color: #720289;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #9925b1;
+}
+
+.imagem_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.imagem_lado {
+    width: 100%;
+    height: 2px;
+    background-color: #81039b;
+    flex-grow: 1; /* Permite que a linha ocupe o espaço restante */
+    margin-right: 10px; /* Espaço entre a linha e a imagem */
+}
+
+/* Estilo para a imagem ao lado da linha */
+.imagem-horizontal {
+    width: 550px; /* Ajuste conforme necessário */
+    height: auto;
+}
+/* HOME */
+
+.saudacoes {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-left: 980px; /* Adiciona um espaço à esquerda da saudação */
+}
+
+/* Estilo para o menu de navegação */
+.menu_navegacao {
+    background-color: #8B08A9; /* Cor de fundo do menu */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 30px; /* Espaçamento interno */
+    width: 500px; /* Largura do menu */
+    margin: 105px 0 0 0; /* Margem superior para espaçamento do nav */
+    position: absolute; /* Permite posicionamento em relação ao nav */
+    left: 150px; /* Garante que fique à esquerda */
+}
+
+.menu_navegacao ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove a margem da lista */
+}
+
+.menu_navegacao li {
+    margin-bottom: 15px; /* Espaço entre os itens do menu */
+}
+
+.menu_navegacao a {
+    display: block; /* Exibe o link como um bloco */
+    padding: 15px; /* Espaçamento interno dos links */
+    text-align: center; /* Alinha o texto dos links à esquerda */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; /* Cor do texto */
+    background-color: #A74FBF; /* Cor de fundo dos botões */
+    border-radius: 10px; /* Bordas arredondadas dos botões */ 
+    transition: background-color 0.3s; /* Transição para o efeito hover */
+    font-size: 24px;
+
+}
+
+.menu_navegacao a:hover {
+    background-color: #9E45B3; /* Cor de fundo ao passar o mouse */
+}
+
+.imagem_horizontal_home{
+    width: 450px; /* Ajuste conforme necessário */
+    height: auto;
+    border-radius: 300px;
+}
+
+.imagem_container_home{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-bottom: 5px;
+    margin-left: 700px;
+}
+
+.imagem_lado_home{
+    width: 100%;
+    height: 400px;
+    flex-grow: 1; /* Permite que a linha ocupe o espaço restante */
+    margin-right: 5px; /* Espaço entre a linha e a imagem */
+}
+
+
+/*CADASTRO USUARIO*/
+
+.conteudo__cadastro_usuario {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* Formulário */
+.conteudo_usuario {
+    background-color: #81039b;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    width: 370px;
+    height: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  
+}
+
+.cadastro_usuario{
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    justify-content: center;
+    display: flex;
+    text-align: center; 
+}
+
+/* Campos do formulário */
+.campo-form-usuario {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.campo-form-usuario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.campo-form-usuario input[type="text"],
+.campo-form-usuario input[type="password"],
+.campo-form-usuario input[type="file"]{
+    width: 97%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9c4aad;
+    color: #FFFFFF;
+    font-size: 16px;
+    outline: none;
+}
+
+
+/* Botão de Envio */
+button[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    background-color: #720289;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #9925b1;
+}
+
+
+
+/* CADASTRO CLIENTES */
+.conteudo_cadastro_cliente {
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 10px;
+}
+.cadastro_cliente {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+    align-items: center;
+}
+
+/* Ajuste adicional no container do conteúdo */
+.formulario_cliente {
+    background-color: #81039b;
+    padding: 30px;
+    border-radius: 15px;
+    width: 700px;
+    height: 400px;
+    display: flex;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Estilos dos campos do formulário */
+.campo-form-cliente {
+    display: block;
+    flex-direction: column;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.campo-form-cliente label {
+    color: #fff;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.campo-form-cliente input[type="text"],
+.campo-form-cliente input[type="number"] {
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9836ab;
+    color: #fff;
+}
+
+.campo-form-cliente input[type="text"]:focus,
+.campo-form-cliente input[type="number"]:focus {
+    outline: none;
+    background-color: #d064d0;
+}
+#nome_cliente{
+    width: 480px;
+}
+
+#telefone_cliente{
+    width:180px;
+}
+
+#email_cliente{
+    width: 310px;
+}
+
+#end_rua_cliente{
+    width: 405px;
+}
+#end_numero_cliente{
+    width: 50px;
+}
+
+/* Botão de envio */
+button[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #720289;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #d064d0;
+}
+
+/* CADASTRO FORNECEDORES */
+.conteudo_cadastro_fornecedor {
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 10px;
+}
+.cadastro_fornecedor {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+    align-items: center;
+}
+
+/* Ajuste adicional no container do conteúdo */
+.formulario_fornecedor{
+    background-color: #81039b;
+    padding: 30px;
+    border-radius: 15px;
+    width: 750px;
+    height: 500px;
+    display: flex;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Estilos dos campos do formulário */
+.campo-form-fornecedor {
+    display: block;
+    flex-direction: column;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.campo-form-fornecedor label {
+    color: #fff;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.campo-form-fornecedor input[type="text"],
+.campo-form-fornecedor input[type="number"], 
+.campo-form-fornecedor input[type="url"] {
+    padding: 8px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9836ab;
+    color: #fff;
+}
+
+.campo-form-fornecedor input[type="text"]:focus,
+.campo-form-fornecedor input[type="number"]:focus {
+    outline: none;
+    background-color: #d064d0;
+}
+#nome_fornecedor{
+    width: 480px;
+}
+
+#telefone_fornecedor{
+    width:200px;
+}
+
+#email_fornecedor{
+    width: 310px;
+}
+
+#end_rua_fornecedor{
+    width: 405px;
+}
+#end_numero_fornecedor{
+    width: 50px;
+}
+
+/* Botão de envio */
+button[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #720289;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #d064d0;
+}
+
+
+/*C O N S U L T A  C L I E N T E*/
+
+.conteudo_consulta_clientes{
+    width: 100%;
+    text-align: center;
+}
+.consulta_clientes{
+    font-size: 25px;
+    color: #FFFFFF;
+}
+.table_container_clientes{
+    width: 100%;
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #9836ab;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.table_container_vermais_clientes{
+    width: 100%;
+    max-width: 1250px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #9836ab;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.clientes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.thead_clientes{
+    background-color: #720289; /* Cabeçalho da tabela em roxo */
+    color: white;
+    padding: 80px;
+    width:100%;
+
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #ab42c0; /* Fundo da linha em hover */
+}
+
+.link_editar {
+    color: #4caf50; /* Verde para o link editar */
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.link_excluir {
+    color: #f44336; /* Vermelho para o link excluir */
+    text-decoration: none;
+}
+
+.link_editar:hover,
+.link_excluir:hover {
+    text-decoration: underline;
+    opacity: 0.8; /* Leve transparência no hover */
+}
+
+.link_mais {
+    color: #ffffff; 
+    text-decoration: none;
+}
+
+.link_mais:hover {
+    text-decoration: underline;
+    opacity: 0.8; /* Leve transparência no hover */
+}
+
+/* C O N S U L T A  F O R N E C E D O R E S */
+.table_container_fornecedor {
+    width: 100%;
+    max-width: 760px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #9836ab;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.table_container_fornecedor_vermais{
+    width: 100%;
+    max-width: 1250px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #9836ab;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 1200px;
+    border-collapse: collapse;
+    display: block;
+}
+
+thead {
+    background-color: #720289; /* Cabeçalho da tabela em roxo */
+    color: white;
+    padding: 80px;
+}
+
+thead th {
+    padding: 15px;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #a34cb5; /* Fundo da linha em hover */
+}
+
+.link_editar {
+    color: #4caf50; /* Verde para o link editar */
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.link_excluir {
+    color: #f44336; /* Vermelho para o link excluir */
+    text-decoration: none;
+}
+
+.link_editar:hover,
+.link_excluir:hover {
+    text-decoration: underline;
+    opacity: 0.8; /* Leve transparência no hover */
+}
+.consulta_fornecedor{
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.link_ver_mais {
+    color: #ffffff; 
+    text-decoration: none;
+}
+
+.link_ver_mais:hover {
+    text-decoration: underline;
+    opacity: 0.8; /* Leve transparência no hover */
+}
+
+/*CONSULTA USUARIOS*/
+.conteudo_consulta_usuario{
+    width: 100%;
+    text-align: center;
+}
+.consulta_usuario{
+    font-size: 25px;
+    color: #FFFFFF;
+}
+.table_container_usuario {
+    width: 640px;
+    max-width: 754px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #9836ab;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 1200px;
+    border-collapse: collapse;
+    display: block;
+}
+
+thead {
+    background-color: #720289; /* Cabeçalho da tabela em roxo */
+    color: white;
+    padding: 80px;
+}
+
+thead th {
+    padding: 15px;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #a34cb5; /* Fundo da linha em hover */
+}
+
+.link_editar {
+    color: #4caf50; /* Verde para o link editar */
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.link_excluir {
+    color: #f44336; /* Vermelho para o link excluir */
+    text-decoration: none;
+}
+
+.link_editar:hover,
+.link_excluir:hover {
+    text-decoration: underline;
+    opacity: 0.8; /* Leve transparência no hover */
+}
+.consulta_fornecedor{
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/*EDITAR CLIENTE*/
+.conteudo_cadastro_cliente {
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 10px;
+}
+.editar_cliente {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+    align-items: center;
+}
+
+/* Ajuste adicional no container do conteúdo */
+.formulario_cliente {
+    background-color: #81039b;
+    padding: 30px;
+    border-radius: 15px;
+    width: 700px;
+    height: 400px;
+    display: flex;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Estilos dos campos do formulário */
+.campo-form-cliente {
+    display: block;
+    flex-direction: column;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.campo-form-cliente label {
+    color: #fff;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.campo-form-cliente input[type="text"],
+.campo-form-cliente input[type="number"] {
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9836ab;
+    color: #fff;
+}
+
+.campo-form-cliente input[type="text"]:focus,
+.campo-form-cliente input[type="number"]:focus {
+    outline: none;
+    background-color: #d064d0;
+}
+#nome_cliente{
+    width: 480px;
+}
+
+#telefone_cliente{
+    width:180px;
+}
+
+#email_cliente{
+    width: 310px;
+}
+
+#end_rua_cliente{
+    width: 405px;
+}
+#end_numero_cliente{
+    width: 50px;
+}
+
+
+
+button[type="submit"]:hover {
+    background-color: #d064d0;
+}
+
+/*EDITAR FORNECEDOR*/
+.conteudo_cadastro_fornecedor {
+    text-align: center;
+    justify-content: center;
+    margin-top: 85px;
+    padding: 10px;
+}
+.editar_fornecedor {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+    align-items: center;
+}
+
+.formulario_fornecedor {
+    background-color: #81039b;
+    padding: 30px;
+    border-radius: 15px;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Estilos dos campos do formulário */
+.campo-form-fornecedor {
+    display: block;
+    flex-direction: column;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.campo-form-fornecedor label {
+    color: #fff;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.campo-form-fornecedor input[type="text"],
+.campo-form-fornecedor input[type="number"] {
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9836ab;
+    color: #fff;
+}
+
+.campo-form-fornecedor input[type="text"]:focus,
+.campo-form-fornecedor input[type="number"]:focus {
+    outline: none;
+    background-color: #d064d0;
+}
+#nome_fornecedor{
+    width: 480px;
+}
+
+#telefone_fornecedor{
+    width:180px;
+}
+#site_fornecedor{
+    width: 175px;
+}
+
+#email_fornecedor{
+    width: 310px;
+}
+
+#end_rua_fornecedor{
+    width: 405px;
+}
+#end_numero_fornecedor{
+    width: 50px;
+}
+/* Botão de envio */
+button[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #720289;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* VER MAIS FORNECEDOR */
+
+
+

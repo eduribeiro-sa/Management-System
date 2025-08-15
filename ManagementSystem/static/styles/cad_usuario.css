@@ -1,0 +1,115 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1b0036, #26004d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo do nav */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #26004d;
+    width: 100%;
+}
+
+nav img {
+    width: 50px;
+    height: auto;
+}
+
+.titulo_sistema {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.saudacoes {
+    font-size: 18px;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+/* Estilo do conteúdo */
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #330066;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.conteudo h2 {
+    font-size: 26px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.campo-form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.campo-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #330066;
+}
+
+button[type="submit"] {
+    padding: 15px;
+    background-color: #7a1bc8;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #6315a3;
+}
+
+/* Ajuste de imagem e posicionamento */
+nav img, .conteudo img {
+    border-radius: 50%;
+}
+
+.conteudo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.conteudo form {
+    flex: 1;
+    max-width: 400px;
+}

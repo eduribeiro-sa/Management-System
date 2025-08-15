@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Fornecedor</title>
+    <link rel="shortcut icon" href="/static/imagens/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">
+            <img class="logo" src="/static/assets/logo_mng-Photoroom-removebg-preview.png" alt="">
+        </a>
+        <div class="titulo_sistema">Sistema de <br> Gerenciamento</div>
+    </nav>
+
+    <div class="linha"></div>
+
+    <div class="conteudo_consulta_fornecedor">
+        <p class="consulta_fornecedor">Consulta Fornecedor</p>
+        <div class="table_container_fornecedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for fornecedor in fornecedores %}
+                    <tr>
+                        <td>{{ fornecedor[0] }}</td>
+                        <td>{{ fornecedor[1] }}</td>
+                        <td>{{ fornecedor[2] }}</td>
+                        <td>
+                            <a href="/editar_fornecedor/{{ fornecedor[0] }}" class="link_editar">Editar</a> <br>
+                            <a href="/excluir_fornecedor/{{ fornecedor[0] }}" class="link_excluir">Excluir</a> <br>
+                            <a href="/ver_mais_fornecedor/{{ fornecedor[0] }}" class="link_ver_mais">Ver mais</a>
+
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

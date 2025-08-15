@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Cliente</title>
+    <link rel="shortcut icon" href="/static/assets/logo_mng-Photoroom-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <a href="/home">
+            <img class="logo" src="/static/assets/logo_mng-Photoroom-removebg-preview.png" alt="">
+        </a>
+        <div class="titulo_sistema">Sistema de <br> Gerenciamento</div>
+    </nav>
+
+    <div class="linha"></div>
+
+    <div class="conteudo_consulta_clientes">
+        <p class="consulta_clientes">Detalhes do Cliente</p>
+        <div class="table_container_vermais_clientes">
+            <table class="clientes">
+                <thead class="thead_clientes">
+                    <tr class="tr_clientes">
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>CPF</th>
+                        <th>Endereço</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ cliente[0] }}</td> <!-- ID -->
+                        <td>{{ cliente[1] }}</td> <!-- Nome -->
+                        <td>{{ cliente[2] }}</td> <!-- Email -->
+                        <td>{{ cliente[3] }}</td> <!-- Telefone -->
+                        <td>{{ cliente[10] }}</td> <!-- CPF -->
+                        <td>{{ cliente[4] }}, {{ cliente[5] }}, {{ cliente[6] }}, {{ cliente[7] }}, {{ cliente[8] }}</td> <!-- Endereço completo -->
+                        <td>
+                            <a href="/editar_cliente/{{ cliente[0] }}" class="link_editar">Editar</a>
+                            <a href="/excluir_cliente/{{ cliente[0] }}" class="link_excluir">Excluir</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
